@@ -1,9 +1,10 @@
-import {Stylesheet} from "@canopy-iiif/app/head";
-import {CanopyHeader} from "@canopy-iiif/app/ui";
+import {Meta, Stylesheet} from "@canopy-iiif/app/head";
+import {CanopyHeader, CanopyFooter} from "@canopy-iiif/app/ui";
 
 export function Head() {
   return (
     <>
+      <Meta siteTitle="Canopy IIIF" />
       <Stylesheet />
       <link rel="preconnect" href="https://fonts.googleapis.com" />
       <link
@@ -20,19 +21,20 @@ export function Head() {
 }
 
 export function App({children}) {
-  const navigation = [
-    {href: '/search?type=work', label: 'Works'},
-    {href: '/guides', label: 'Guides'},
-    {href: '/contact', label: 'Contact'},
-  ];
-
-return (
-
-<div>
-  <CanopyHeader navigation={navigation} title="abolition now."></CanopyHeader>
-  <main className="max-w-none">{children}</main>
-  <footer className="border-t border-slate-200 text-slate-500">
-    <div className="mx-auto max-w-content w-full px-4 py-6">(footer)</div>
-  </footer>
-</div>
-); }
+  return (
+    <>
+      <CanopyHeader
+        navigation={[
+          {href: "/search?type=work", label: "Works"},
+          {href: "/guides", label: "Guides"},
+          {href: "/contact", label: "Contact"},
+        ]}
+        title="abolition now."
+      />
+      <main>{children}</main>
+      <CanopyFooter>
+        <p>Copyright 2025 Canopy IIIF, MIT License</p>
+      </CanopyFooter>
+    </>
+  );
+}
