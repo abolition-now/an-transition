@@ -1,40 +1,33 @@
-collection: https://iiif.archive.org/iiif/3/abolition-now-images/collection.json
+collection:
+  - https://iiif.archive.org/iiif/3/abolition-now-images/collection.json
 metadata:
-  [
-    "subject",
-    "creator",
-    "slogans",
-    "visual_motifs",
-    "date",
-    "geography",
-    "people",
-    "medium",
-  ]
+  - creator
+  - date
+  - geography
+  - medium
+  - people
+  - slogans
+  - subject
+  - visual_motifs
 featured:
-  [
-    "https://iiif.archive.org/iiif/an_0028_abolitionwithbarbedwire/manifest.json",
-    "https://iiif.archive.org/iiif/an_0089_waterismedicine/manifest.json",
-    "https://iiif.archive.org/iiif/an_0210_0211_restinpower/manifest.json",
-    "https://iiif.archive.org/iiif/an_0148_abolitionpigcop/manifest.json",
-    "https://iiif.archive.org/iiif/an_0073_youthsoeducated/manifest.json",
-    "https://iiif.archive.org/iiif/an_0141_humanityoverhate/manifest.json",
-    "https://iiif.archive.org/iiif/an_0007_stopcopcity/manifest.json",
-    "https://iiif.archive.org/iiif/an_0007_walaaloisjeceylgeorgefloydphoenix/manifest.json",
-    "https://iiif.archive.org/iiif/an_0063_housingkeepsyouthfree/manifest.json",
-  ]
+  - https://iiif.archive.org/iiif/an_0028_abolitionwithbarbedwire/manifest.json
+  - https://iiif.archive.org/iiif/an_0089_waterismedicine/manifest.json
+  - https://iiif.archive.org/iiif/an_0210_0211_restinpower/manifest.json
+  - https://iiif.archive.org/iiif/an_0148_abolitionpigcop/manifest.json
+  - https://iiif.archive.org/iiif/an_0073_youthsoeducated/manifest.json
+  - https://iiif.archive.org/iiif/an_0141_humanityoverhate/manifest.json
+  - https://iiif.archive.org/iiif/an_0007_stopcopcity/manifest.json
+  - https://iiif.archive.org/iiif/an_0007_walaaloisjeceylgeorgefloydphoenix/manifest.json
+  - https://iiif.archive.org/iiif/an_0063_housingkeepsyouthfree/manifest.json
 search:
-  tabs:
-    order: ["work", "page", "guides"]
-  index:
-    metadata:
-      enabled: true # default: true
-      all: false # default: false
-    summary:
-      enabled: true # default: true
-    annotations:
-      enabled: false # default: false
-      motivation: ["commenting", "tagging"]
+  results:
+    work:
+      layout: grid
+      result: figure
+    page:
+      layout: list
+      result: article
 theme:
-  appearance: dark # light OR dark
-  accentColor: red # blue, purple, green, orange, red, pink, teal, ...
-  grayColor: gray # slate, gray, mauve, olive, sand, ...
+  appearance: dark
+  accentColor: red
+  grayColor: gray
